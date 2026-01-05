@@ -50,7 +50,6 @@ internal class RouterPage : BasePager() {
                             backgroundColor(0xFFE96664)
                             justifyContentCenter()
                             alignItemsCenter()
-                            transform(skew = Skew(-24f, 0f)) // 倾斜效果（平行四边形）
                             border(
                                 Border(
                                     2f,
@@ -65,7 +64,6 @@ internal class RouterPage : BasePager() {
                             attr {
                                 text("111")
                                 fontSize(16f)
-                                transform(skew = Skew(24f, 0f)) // 反向倾斜文本（使其正常显示）
                                 color(Color.WHITE)
                             }
                         }
@@ -77,7 +75,7 @@ internal class RouterPage : BasePager() {
                             width(21f)
                             height(50f)
                             backgroundColor(0xFFE96664)
-                            transform(skew = Skew(-24f, 0f))
+                            transform(skew = Skew(-24f, 0f), anchor = Anchor(0f,0f))
                             positionAbsolute()
                             top(-1f) // 确保完全覆盖
                             left((ctx.pagerData.pageViewWidth - pkTotalWidth) / 2) // 定位到红色区域右侧
@@ -119,7 +117,7 @@ internal class RouterPage : BasePager() {
                             width(21f)
                             height(48f)
                             backgroundColor(0xFF5199FF)
-                            transform(skew = Skew(-24f, 0f))
+                            transform(skew = Skew(-24f, 0f), anchor = Anchor(0f,0f))
                             positionAbsolute()
                             right(ctx.pagerData.pageViewWidth / 2 - pkTotalWidth / 2 - 21f)
                             zIndex(-1)
